@@ -1,1 +1,2 @@
-# 2f3t
+# DUPLA 
+## BIA - 10 | KAROL - 22
