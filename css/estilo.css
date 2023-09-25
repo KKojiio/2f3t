@@ -2,3 +2,26 @@ body {
     background-color: rgb(243, 243, 105);
     color: orange;
 }
+.calculadora {
+    background-color: rgb(240, 142, 31);
+    padding: 8px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.display_calc {
+    background-color: transparent;
+    text-align: center;
+
+}
+#resultado {
+    padding: 2px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+button {
+    width: 40px;
+    height: 40px;
+}
