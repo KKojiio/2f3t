@@ -8,10 +8,45 @@ let a = "";
 let b = "";
 let valor = "";
 let temPonto = false;
+let desligada = true;
+
 //mensagem (soma(10, soma(8,2)));
 //mensagem (soma(2, div(2,2)));
 //mensagem (soma(div(80,2), mult (5,3)) );
 //mensagem (soma(sub(8,5), sub(3,70)));
+
+function porcentagem(){
+    if(executa == "mult"){
+        b = valor;
+        escrever_display (div(mult(a,b),100));
+        b = "";
+        valor = "";
+    }
+}
+function raiz_quadrada (){
+    escrever_display(raiz(valor));
+    valor = "";
+}
+
+function onoff (){
+    if(desligada){
+        escrever_display("");
+        desligada = false;
+    }else{
+        zerar();
+        escrever_display("");
+        desligada =  true;
+    }
+}
+
+function zerar(){
+    if(desligada) return;
+    a = "";
+    b = "";
+    valor = "";
+    temPonto = "";
+    escrever_display(0);
+}
 
 //Função para mostrar  numeros no display
 function escrever_display(num){
@@ -20,6 +55,7 @@ function escrever_display(num){
 }
 
 function digitando(tecla){
+    if(desligada) return;
     if( tecla == "."){
         if(!temPonto){
             temPonto = true;
@@ -35,12 +71,14 @@ function digitando(tecla){
 }
 let executa = "";
 function operacao(op){
+    if(desligada) return;
     executa = op;
     a = valor;
     valor = "";
     temPonto = false;
 }
 function calcula(){
+    if(desligada) return;
     if(executa != ""){
         b=valor;
         if(executa == "mult") escrever_display(mult(a,b));
