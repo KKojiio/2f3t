@@ -5,9 +5,9 @@ mult = (a,b) => a * b;
 div = (a,b) => a / b;
 raiz = x => Math.sqrt(x);
 
-let a = "";
-let b = "";
-let c = "";
+let a = "0";
+let b = "0";
+let c = "0";
 let sa = "+";
 let sb = "+";
 let sc = "+";
@@ -53,7 +53,7 @@ function zerar(){
     escrever_display(0);
 }
 
-//Função para mostrar  numeros no display
+//Função para mostrar numeros no display
 function escrever_display(num){
     document.getElementById("resultado").value = num;
 
@@ -97,6 +97,40 @@ function calcula(){
     }
 }
 
+const calcula_eqa2g = ()=>{
+    //delta = b*b - 4 .a.c
+    //!= --> representa diferente
+    // || representa ou
+    if(a == "" || a == 0 || a == "0") return;
+    a = Number(a);
+    b = Number(b);
+    c = Number(c);
+    if (sa != "+") a = -a;
+    if (sb != "+") a = -b;
+    if (sc != "+") a = -c;
+    let delta = (b*b) - (4*a*c);
+    document.getElementById("delta").innerHTML = delta;
+}
+
 const set_sinal_a = ()=>{
-    
+    sa = document.getElementById("a").value;
+}
+
+const set_sinal_b = ()=>{
+    sb = document.getElementById("b").value;
+}
+
+const set_sinal_c = ()=>{
+    sc = document.getElementById("c").value;
+}
+
+const set_valor_a = ()=>{
+    a = document.getElementById("valor_a").value;
+}
+
+const set_valor_b = ()=>{
+    b = document.getElementById("valor_b").value;
+}
+const set_valor_c = ()=>{
+    c = document.getElementById("valor_c").value;
 }
