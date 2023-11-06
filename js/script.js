@@ -7,7 +7,7 @@ raiz = x => Math.sqrt(x);
 
 let a = "0";
 let b = "0";
-let c = "0";
+let c = "0  ";
 let sa = "+";
 let sb = "+";
 let sc = "+";
@@ -109,28 +109,48 @@ const calcula_eqa2g = ()=>{
     if (sb != "+") a = -b;
     if (sc != "+") a = -c;
     let delta = (b*b) - (4*a*c);
-    document.getElementById("delta").innerHTML = delta;
+    document.getElementById("delta").innerHTML = "Delta = " + delta;
+    if(delta < 0 ) {
+        document.getElementById("raiz").innerHTML = "Não possu raiz.";
+    }
+    if (delta == 0){
+        let x = -b/(2*a);
+        document.getElementById("raiz").innerHTML = "X1 = X2 = " + x;
+    }
+    if (delta > 0){
+        let x1 = (-b + Math.sqrt(delta))/(2*a);
+        let x2 = (-b - Math.sqrt(delta))/(2*a);
+        document.getElementById("raiz").innerHTML = "X1 = " + x1 +" e X2 = " + x2;
+    }
 }
 
 const set_sinal_a = ()=>{
     sa = document.getElementById("a").value;
+    calcula_eqa2g();
 }
 
 const set_sinal_b = ()=>{
     sb = document.getElementById("b").value;
+    calcula_eqa2g();
 }
 
 const set_sinal_c = ()=>{
     sc = document.getElementById("c").value;
+    calcula_eqa2g();
 }
 
 const set_valor_a = ()=>{
     a = document.getElementById("valor_a").value;
+    calcula_eqa2g();
 }
 
 const set_valor_b = ()=>{
     b = document.getElementById("valor_b").value;
+    calcula_eqa2g();
 }
+
 const set_valor_c = ()=>{
     c = document.getElementById("valor_c").value;
+    calcula_eqa2g();
 }
+DELTA
