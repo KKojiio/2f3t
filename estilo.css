@@ -1,4 +1,50 @@
 body {
-    background-color: rgb(243, 243, 105);
-    color: orange;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.calculadora {
+    background-color: rgb(112, 129, 129);
+    padding: 8px;
+    width: 220px;
+    text-align: center;
+    border-radius: 10px;
+}
+.display_calc {
+    background-color: transparent;
+    text-align: center;
+}
+#resultado {
+    padding: 2px;
+    background-color: black;
+    color: yellow;
+    text-align: center;
+}
+button {
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+}
+#btn_igual {
+    background-color: tomato;
+}
+
+.entrada {
+    width: 40px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+.pa {
+    width: 100%;
+    background: #5672a5;
+    padding: 20px;
+    color: rgb(236, 189, 101);
+}
+
+.calculadoraPA input {
+    width: 48px;
+    border: none;
+    border: 1px solid black;
 }
