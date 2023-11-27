@@ -168,3 +168,17 @@ const set_n = ()=>{
     mostrar_pa();   
  }
 
+ let num = 0;
+ const mudar_imagem = () =>{ 
+     
+     num++; 
+ 
+     setTimeout(()=>{
+         document.getElementById("figura").src = "./img/img/imagem"+num+".jpg";
+         console.log("o andre é idiota <3")
+         if(num == 3) num = 0;
+         mudar_imagem();
+     },1000);
+ 
+ }
+ mudar_imagem();
